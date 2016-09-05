@@ -1,6 +1,6 @@
 {
   "name": "udacity-machine-learning",
   "tagline": "My Machine Learning projects",
-  "body": "### Description\r\nMy solutions for Udacity's Machine Learning nanodegree curriculum.\r\n\r\n### Author\r\n* @rigved\r\n\r\n### Projects\r\n* [Titanic Survival Exploration](https://github.com/rigved/udacity-machine-learning/tree/master/projects/titanic_survival_exploration)\r\n* [Boston Housing](https://github.com/rigved/udacity-machine-learning/tree/master/projects/boston_housing)\r\n* [Student Intervention](https://github.com/rigved/udacity-machine-learning/tree/master/projects/student_intervention)",
+  "body": "### $ Description\r\nMy solutions for Udacity's Machine Learning nanodegree curriculum.\r\n\r\n### $ Author\r\n* @rigved\r\n\r\n### $ Projects\r\n* [Titanic Survival Exploration](https://github.com/rigved/udacity-machine-learning/tree/master/projects/titanic_survival_exploration)\r\n* [Boston Housing](https://github.com/rigved/udacity-machine-learning/tree/master/projects/boston_housing)\r\n* [Student Intervention](https://github.com/rigved/udacity-machine-learning/tree/master/projects/student_intervention)",
   "note": "Don't delete this file! It's used internally to help with page regeneration."
 }
