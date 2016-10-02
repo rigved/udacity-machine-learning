@@ -12063,9 +12063,9 @@ div#notebook {
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> I used the pandas 'sample' function to find three customers that vary significantly. The three customers chosen could belong to the following type of establishments:</p>
 <ul>
-<li>Customer 0: This could be a restaurant. One of the reasons for this is because it purchases large amounts of fresh, frozen, and delicatessen items that would be used in food items.</li>
-<li>Customer 1: This could be a retail store. The reason for this is because it purchases a fair amount of almost all types of items.</li>
-<li>Customer 2: This could be a grocery store that provides a large number of fresh items like fruits and vegetables, among other items.</li>
+<li>Customer 0: This could be a cafe. One of the reasons for this is that it's consumption of 'Fresh', 'Frozen' and 'Delicatessen' items is much higher than the mean of the respective products and even reaches the top 25%. However, it's consumption of 'Milk', 'Grocery' and 'Detergents_Paper' is lower than the mean of these products and around the 50% mark. This means that this establishment uses various items to prepare fast food, which mostly requires fresh food items, along with frozen and delicatessen items for special food items like desserts. Also, since this establishment purchases large amounts of 'Frozen' items, so dessert items might be part of the main menu as opposed to the menu of a restaurant where dessert items are eaten at the end and in much smaller quantities than at a cafe.</li>
+<li>Customer 1: This could be a grocery store. One of the reasons for this is that it's consumption of 'Milk', 'Grocery' and 'Detergents_Paper' items is much higher than the mean of the respective products and even reaches the top 25% (in case of 'Grocery' items, it almost reaches the top 25%). On the other hand, it's consumption of 'Fresh', 'Frozen' and 'Delicatessen' items is much lower than the mean of the respective products. So, this establishment stores larger amounts of various items that people purchase during grocery shopping.</li>
+<li>Customer 2: This could be a restaurant. One of the reasons for this is that it's consumption of 'Fresh' and 'Delicatessen' items is much higher than the mean of the respective products and even reaches the top 25%. It's consumption of 'Frozen' items is lower than the mean but it is still in the 50% to 75% mark. However, it's consumption of 'Milk' and 'Grocery' items is lower than the mean of these products and even reaches the bottom 25%. It's consumption of 'Detergents_Paper' items is also lower than the mean but it is still in between the 25% and 50% mark. Again, this means that this establishment uses various items to prepare food, which mostly requires fresh food items, along with frozen and delicatessen items for special food items desserts. Also, since this establishment purchases large amounts of 'Fresh' items, so it might be preparing lunch and dinner items as opposed to fast food items.</li>
 </ul>
 
 </div>
@@ -14823,7 +14823,8 @@ MzMzMzMzs7b8P6YbhZeIVDkmAAAAAElFTkSuQmCC
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong> Yes, there is some degree of correlation between the 'Grocery' and 'Detergents_Paper' features. These two features exhibit positive correlation.</p>
 <p>It confirms my suspicion that 'Detergents_Paper' feature can be predicted from the 'Grocery' feature.</p>
-<p>The data of these features is not normally distributed. This is because most of the data points do not lie around any point of central tendency. Most of the data points are present near the origin, making this distribution positively skewed. Most of these points are on a line that passes through the origin of the axes of these two features and the value of the points of one feature increases in value as the value of the points of the other feature increases.</p>
+<p>The data of these features is not normally distributed. This is because most of the data points do not lie around any point of central tendency. Most of the data points are present near the origin and the median falls below than the mean, making this distribution positively skewed. Most of these points are on a line that passes through the origin of the axes of these two features and the value of the points of one feature increases in value as the value of the points of the other feature increases.</p>
+<p>Based on the scatter plot, it seems that there are many outliers for most of the features.</p>
 
 </div>
 </div>
@@ -21893,12 +21894,14 @@ JEmSJEmqsGgkSZIkSZKkiv8DX7lcXqi8o3UAAAAASUVORK5CYII=
 <p>The total explained variance in the first four principal components is '0.9311'.</p>
 <ul>
 <li>So, around 71% of the variation in the data can be explained using the first two principal components (dimensions) and around 93% of the variation in the data can be explained using the first four principal components. So, these four principal components can be used together to summarize around 93% of the variation in the data of six features.</li>
-<li>There are certain trends that can be explained by looking at the first four principal components.</li>
-<li>As the negative weight for the 'Grocery', 'Milk' and 'Detergents_Paper' goods is decreased, the amount of variation in the data that can be summarized by the first four principal components decreases from around 44% to 10%.</li>
-<li>As the positive weight for the 'Frozen' goods is increased, the amount of variation in the data that can be summarized by the first four principal components decreases from around 44% to 10%.</li>
-<li>As the negative weight for the 'Delicatessen' goods is increased, the amount of variation in the data that can be summarized by the first four principal components decreases from around 44% to 10%.</li>
-<li>As the negative weight for the 'Fresh' goods is increased, the amount of variation in the data that can be summarized by the first four principal components decreases from around 44% to 12%.</li>
-<li>So, in summary, it seems that most of the customers purchase a combination of 'Grocery', 'Milk' and 'Detergents_Paper'.</li>
+<li>There are certain trends that can be explained by looking at the first four principal components:<ul>
+<li>Dimension 1: A significant amount of negative weight is placed on 'Detergents_Paper' items and a meaningful amount of negative weight is placed on 'Grocery' and 'Milk' products. There are small positive weights on 'Fresh' and 'Frozen' items and a small negative weight on 'Delicatessen' products. This dimension is best categorized by customer spending on retail goods where most customers purchase small amounts of retail goods.</li>
+<li>Dimension 2: A significant amount of negative weight is placed on 'Fresh' items and a meaningful amount of negative weight is placed on both 'Frozen' and 'Delicatessen' products. There is a small negative weight on 'Milk' items. The amount of negative weights on 'Grocery' and 'Detergents_Paper' items is almost negligible. This dimension is best categorized by customer spending on non-retail goods which are directly consumed by the customer (for preparing food items in a restaurant etc.) where most customers purchase small amounts of non-retail goods.</li>
+<li>Dimension 3: A significant amount of negative weight is placed on 'Fresh' items and a significant amount of positive weight is placed on 'Delicatessen' items. A meaningful amount of positive weight is placed on 'Frozen' items. A small amount of negative weight is placed on 'Detergents_Paper' products. The amount of positive weight on 'Milk' items and amount of negative weight on 'Grocery' items is almost negligible. This dimension is best categorized by customer spending on non-retail goods which are directly consumed by the customer (for preparing food items in a cafe etc.) where most customers purchase large amounts of 'Delicatessen' goods and most customers purchase small amounts of 'Fresh' goods.</li>
+<li>Dimension 4: A significant amount of positive weight is placed on 'Frozen' items and a meaningful amount of negative weight is placed on 'Delicatessen' items. A small amount of negative weight is placed on 'Fresh' items and a small amount of positive weight is placed on 'Detergents_Paper' products. The amount of positive weights on 'Milk' items and 'Grocery' items is almost negligible. This dimension is best categorized by customer spending on non-retail goods which are directly consumed by the customer (for preparing food items in a cafe etc.) where most customers purchase large amounts of 'Frozen' goods and most customers purchase small amounts of 'Delicatessen' goods.</li>
+</ul>
+</li>
+<li>So, in summary, it seems that most of the customers purchase small quantities of non-retail goods. These non-retail goods are not stored for long period of time. In fact, these non-retail goods are consumed quickly because their shelf-life is short. As such, these products need to be delivered almost on a daily basis.</li>
 </ul>
 
 </div>
@@ -22117,7 +22120,13 @@ JEmSJEmqsGgkSZIkSZKkiv8DX7lcXqi8o3UAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Advantages of K-Means clustering:</p>
+<p><strong>Answer:</strong> References:</p>
+<ul>
+<li><a href="https://www.quora.com/What-is-the-difference-between-K-means-and-the-mixture-model-of-Gaussian">https://www.quora.com/What-is-the-difference-between-K-means-and-the-mixture-model-of-Gaussian</a></li>
+<li><a href="https://sites.google.com/site/dataclusteringalgorithms/k-means-clustering-algorithm">https://sites.google.com/site/dataclusteringalgorithms/k-means-clustering-algorithm</a></li>
+<li><a href="https://sites.google.com/site/dataclusteringalgorithms/gaussian-clustering-algorithm">https://sites.google.com/site/dataclusteringalgorithms/gaussian-clustering-algorithm</a></li>
+</ul>
+<p>Advantages of K-Means clustering:</p>
 <ul>
 <li>It is computationally fast and efficient.</li>
 <li>It is simple and easy to implement and easy to interpret the results.</li>
@@ -23496,8 +23505,8 @@ ICRJkiRJkpQz/x8utYKOYfkGFgAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> A customer who is assigned to 'Cluster 0' should best identify with the establishments represented by the feature set of 'Segment 1'. This is indicated by the higher amount of the total purchase cost of the 'Milk', 'Grocery' and 'Detergents_Paper' product categories.</p>
-<p>A customer who is assigned to 'Cluster 1' should best identify with the establishments represented by the feature set of 'Segment 0'. This is indicated by the higher amount of the total purchase cost of the 'Fresh', 'Frozen' and 'Delicatessen' product categories.</p>
+<p><strong>Answer:</strong> A customer who is assigned to 'Cluster 0' should best identify with the establishments represented by the feature set of 'Segment 1'. These establishments could be grocers and retail stores. The reason for this is indicated by the higher amount of the total purchase cost of the 'Milk', 'Grocery' and 'Detergents_Paper' product categories, which is higher than the mean of the respective products and even reaches the top 25%.</p>
+<p>A customer who is assigned to 'Cluster 1' should best identify with the establishments represented by the feature set of 'Segment 0'. These establishments could be restaurants and cafes. The reason for this is indicated by the higher amount of the total purchase cost of the 'Fresh' and 'Frozen' product categories, which may be lower than the mean of the respective products but still reaches the top 50%. Also, the total purchase cost of the 'Delicatessen' product category is also lower than the mean and in the 25% to 50% marks.</p>
 
 </div>
 </div>
@@ -23590,9 +23599,8 @@ Sample point 2 predicted to be in Cluster 0
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer:</strong> Some items are purchased daily by customers because these items are utilized very frequently. Thus, such items are sold out quickly. 'Fresh' items are generally sold out quickly because such items have a short duration of time during which these items are edible. On the other hand, 'Detergents_Paper' items have a longer duration of time during which these items are usable. So, customers generally purchase these items less frequntly and these items are generally purchased in bulk.</p>
-<p>The customers who mainly purchase items which are used very frequently and get sold out quickly would react negatively to the change in delivery service. This is because these items are in high demand and are consumed by a large number of people daily. So, such customers would require a daily supply of these items. Such customers might even purchase smaller quantities of these items to ensure that there are less number of items which remain unsold and get spoilt.</p>
-<p>By contrast, the customers who mainly purchase items which are used less frequently or get sold out slowly would react positively to the change in delivery service. This is because these items can be stored for larger periods of time while still being usable. The customers can purchase such items in bulk and store them for longer periods of time before the stock needs to be replinished.</p>
+<p><strong>Answer:</strong> An A/B test consists of a control version (like the current 5 days a week delivery service) and a treatment version (like the proposed 3 days a week delivery service). Based on the previous clusters, the A/B test needs to be performed in a manner such that some portion of customers from both segments (both retail and restaurant) experience the control as well the treatment.</p>
+<p>So, the delivery service should be changed for some customers from cluster 0 as well as for some customers from cluster 1. This will allow the wholesale distributor to determine which cluster's customers would react positively to the change in delivery service and which cluster's customers would react negatively to the same change.</p>
 
 </div>
 </div>
